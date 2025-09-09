@@ -3,6 +3,7 @@ import { getAllBooksHandler } from "./handler.js";
 import { addBookHandler } from "./handler.js";
 import { getBookByIdHandler } from "./handler.js";
 import { updateBookByIdHandler } from "./handler.js";
+import { deleteBookByIdHandler } from "./handler.js";
 
 const router = express.Router();
 
@@ -11,6 +12,7 @@ router.get("/books", getAllBooksHandler);
 router.post("/books", addBookHandler);
 router.get("/books/:bookId", getBookByIdHandler);
 router.put("/books/:bookId", updateBookByIdHandler);
+router.delete("/books/:bookId", deleteBookByIdHandler);
 
 router.get("/", (req, res) => {
   res.send("Hello World");
