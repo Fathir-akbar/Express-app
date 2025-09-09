@@ -79,6 +79,20 @@ export const updateBookByIdHandler = (req, res) => {
     });
   }
 
+  if (!name || !name.trim()) {
+    return res.status(400).json({
+      status: "fail",
+      message: "nama buku harus diisi",
+    });
+  }   
+
+  if (!author || !author.trim()) {
+    return res.status(400).json({
+      status: "fail",
+      message: "author buku harus diisi",
+    });
+  }
+
   book.name = name;
   book.author = author;
 
