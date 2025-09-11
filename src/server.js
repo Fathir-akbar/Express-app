@@ -1,5 +1,6 @@
 import express from "express";
-import router from "./routes.js";
+import productsRouter from "./routes/productRoutes.js";
+import router from "./routes/bookRoutes.js";
 
 //membuat server
 const app = express();
@@ -10,6 +11,7 @@ app.use(express.json());
 const port = 5000;
 
 app.use(router);
+app.use(productsRouter)
 
 //menjalankan server
 app.listen(port, () => {

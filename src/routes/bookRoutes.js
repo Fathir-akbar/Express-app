@@ -1,9 +1,11 @@
 import express from "express";
-import { getAllBooksHandler } from "./handler.js";
-import { addBookHandler } from "./handler.js";
-import { getBookByIdHandler } from "./handler.js";
-import { updateBookByIdHandler } from "./handler.js";
-import { deleteBookByIdHandler } from "./handler.js";
+import {
+  addBookHandler,
+  deleteBookByIdHandler,
+  getAllBooksHandler,
+  getBookByIdHandler,
+  updateBookByIdHandler,
+} from "../handler/bookHandler.js";
 
 const router = express.Router();
 

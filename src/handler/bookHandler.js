@@ -1,4 +1,5 @@
-import { books } from "./data.js";
+import { books } from "../data/book.js";
+
 //Handler
 export const getAllBooksHandler = (req, res) => {
   res.json({
@@ -6,7 +7,6 @@ export const getAllBooksHandler = (req, res) => {
     data: { books },
   });
 };
-
 
 // menambahkan buku
 export const addBookHandler = (req, res) => {
@@ -84,7 +84,7 @@ export const updateBookByIdHandler = (req, res) => {
       status: "fail",
       message: "nama buku harus diisi",
     });
-  }   
+  }
 
   if (!author || !author.trim()) {
     return res.status(400).json({
